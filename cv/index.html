@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Danylo Chybichyk</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <script src="js/theme.js" defer></script>
+    <script src="js/skills.js" defer></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">DC<span>.</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Start</a></li>
+            <li><a href="#about">O mnie</a></li>
+            <li><a href="#skills">Umiejętności</a></li>
+            <li><a href="#experience">Doświadczenie</a></li>
+        </ul>
+        <button id="theme-btn" class="theme-btn-mini"><i class="fas fa-moon"></i></button>
+    </nav>
+
+    <header id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="reveal">Cześć, jestem <span>Danylo</span></h1>
+            <p class="reveal">Student Informatyki & Full-Stack Developer</p>
+            <div class="hero-btns reveal">
+                <a href="#experience" class="btn-primary">Moje Projekty</a>
+                <a href="#contact" class="btn-secondary">Kontakt</a>
+            </div>
+            <div class="social-links reveal" style="margin-top: 20px;">
+                <a href="https://github.com/diepeeeece" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/dchybic" target="_blank"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="container">
+        <div class="section-title">
+            <h2>O mnie</h2>
+            <div class="underline"></div>
+        </div>
+        <div class="about-grid">
+            <div class="about-text glass-panel">
+                <p>Zmobilizowany student 3 roku informatyki (Akademia Finansów i Biznesu Vistula) z praktycznym doświadczeniem w tworzeniu stron internetowych, pracy w chmurze Microsoft Azure oraz analizie danych przy użyciu Pythona i Pandas. Posiadam podstawową wiedzę z zakresu rozwoju zaplecza. Poszukuję stażu, aby zastosować i poszerzyć swoje umiejętności techniczne w rzeczywistych projektach.</p>
+                <div class="stats" style="margin-top: 20px;">
+                    <div class="stat-item"><strong>4</strong><p>Języki (PL, EN, UA, RU)</p></div>
+                    <div class="stat-item"><strong>3</strong><p>Rok Studiów</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="bg-alt">
+        <div class="container">
+            <div class="section-title">
+                <h2>Umiejętności</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card" data-width="85">
+                    <i class="fab fa-js"></i>
+                    <h3>HTML / CSS / JS</h3>
+                    <div class="bar"><div class="fill"></div></div>
+                </div>
+                <div class="skill-card" data-width="80">
+                    <i class="fab fa-python"></i>
+                    <h3>Python (Pandas, NumPy)</h3>
+                    <div class="bar"><div class="fill"></div></div>
+                </div>
+                <div class="skill-card" data-width="70">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL & PostgreSQL</h3>
+                    <div class="bar"><div class="fill"></div></div>
+                </div>
+                <div class="skill-card" data-width="60">
+                    <i class="fab fa-microsoft"></i>
+                    <h3>Microsoft Azure</h3>
+                    <div class="bar"><div class="fill"></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="container">
+        <div class="section-title">
+            <h2>Doświadczenie i Projekty</h2>
+        </div>
+        <div class="projects-grid">
+            
+            <div class="project-card glass-panel">
+                <div class="project-info">
+                    <span class="date-badge">2025</span>
+                    <h3>Full-Stack Developer (Projekt uczelniany)</h3>
+                    <p>Tworzenie aplikacji webowej restauracji. Projektowanie i implementacja formularzy rezerwacji z zapisem danych w bazie oraz panelu administratora.</p>
+                    <div class="tech-stack">
+                        <span>Next.js</span> <span>React</span> <span>TypeScript</span> <span>TailwindCSS</span> <span>Prisma</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-panel">
+                <div class="project-info">
+                    <span class="date-badge">2025</span>
+                    <h3>Analiza danych (Projekt uczelniany)</h3>
+                    <p>Analiza danych w Pythonie z użyciem Pandas i NumPy. Czyszczenie datasetów CSV, tworzenie raportów i modeli ML (Linear Regression, Logistic Regression, Decision Tree).</p>
+                    <div class="tech-stack">
+                        <span>Python</span> <span>Pandas</span> <span>Machine Learning</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card glass-panel">
+                <div class="project-info">
+                    <span class="date-badge">2025 - obecnie</span>
+                    <h3>Archiwum Libris</h3>
+                    <p>Organizacja i archiwizacja dokumentów.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container text-center">
+            <h2>Skontaktuj się ze mną</h2>
+            <p> +48 880 632 697 | chibricosic@gmail.com</p>
+            <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.7;">
+                Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji... (RODO).
+            </p>
+            <p style="margin-top: 20px;">&copy; 2026 Danylo Chybichyk.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
