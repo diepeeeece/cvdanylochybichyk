@@ -1,0 +1,61 @@
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.1), transparent 40%);
+    padding-top: 60px;
+}
+.hero h1 { font-size: 4rem; margin-bottom: 10px; }
+.hero h1 span { color: var(--primary); }
+.hero p { font-size: 1.2rem; color: var(--text-muted); margin-bottom: 30px; }
+
+/* Glass Panels */
+.glass-panel {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+.skill-card {
+    background: var(--bg); border: 1px solid var(--glass-border); padding: 25px; border-radius: 12px; text-align: center; transition: transform 0.3s;
+}
+.skill-card:hover { transform: translateY(-5px); }
+.skill-card i { font-size: 2.5rem; color: var(--primary); margin-bottom: 15px; }
+.bar { background: rgba(0,0,0,0.1); height: 8px; border-radius: 4px; overflow: hidden; margin-top: 15px; }
+.fill { background: var(--primary); height: 100%; width: 0; transition: width 1.5s ease; border-radius: 4px; }
+
+/* Projects / Experience */
+.projects-grid {
+    display: grid; gap: 30px;
+}
+.project-card { transition: transform 0.3s; }
+.project-card:hover { transform: translateY(-5px); border-color: var(--primary); }
+.date-badge { display: inline-block; background: rgba(59, 130, 246, 0.1); color: var(--primary); padding: 5px 12px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; margin-bottom: 15px; }
+.tech-stack { margin-top: 15px; display: flex; flex-wrap: wrap; gap: 10px; }
+.tech-stack span { background: var(--bg); border: 1px solid var(--glass-border); padding: 5px 10px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; }
+
+/* Animations classes for JS */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+    .navbar { padding: 15px 20px; }
+    .nav-links { display: none; }
+    .hero h1 { font-size: 2.5rem; }
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
