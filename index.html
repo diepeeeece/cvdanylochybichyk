@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Danylo Chybichyk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link id="theme-style" rel="stylesheet" href="red.css" />
+  </head>
+  <body>
+    <header class="hero-section">
+      <div class="container text-center">
+        <h1>Danylo Chybichyk</h1>
+        <p class="subtitle">Student Informatyki | Full-Stack Developer</p>
+        <div class="contact-links">
+          <a href="mailto:chibricosic@gmail.com" class="btn">Email</a>
+          <a
+            href="https://github.com/diepeeeece"
+            target="_blank"
+            class="btn btn-outline"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/dchybic"
+            target="_blank"
+            class="btn btn-outline"
+            >LinkedIn</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card section-spacing">
+        <h2 class="section-title">O mnie</h2>
+        <p>
+          Zmobilizowany student 3 roku informatyki (Akademia Finansów i Biznesu
+          Vistula) z praktycznym doświadczeniem w tworzeniu stron internetowych,
+          pracy w chmurze Microsoft Azure oraz analizie danych przy użyciu
+          Pythona i Pandas. Poszukuję stażu, aby zastosować i poszerzyć swoje
+          umiejętności techniczne w rzeczywistych projektach.
+        </p>
+      </section>
+
+      <section class="card section-spacing">
+        <h2 class="section-title">Umiejętności</h2>
+        <ul class="skills-list">
+          <li>
+            <strong>Języki i technologie:</strong> Python (Pandas), SQL
+            (podstawowy), HTML/CSS/JS, Git
+          </li>
+          <li>
+            <strong>Narzędzia i platformy:</strong> Microsoft Azure, Microsoft
+            Excel, PowerPoint, Word
+          </li>
+          <li>
+            <strong>Języki obce:</strong> Polski (C1+), Angielski (B2),
+            Ukraiński (C2), Rosyjski (ojczysty)
+          </li>
+          <li>
+            <strong>Kompetencje miękkie:</strong> Praca w zespole,
+            samodzielność, analityczne myślenie
+          </li>
+        </ul>
+      </section>
+
+      <section class="card section-spacing">
+        <h2 class="section-title">Doświadczenie i Projekty</h2>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025 - obecnie</div>
+          <h3>Full-Stack Developer (projekt uczelniany)</h3>
+          <p>
+            Tworzenie aplikacji webowej restauracji przy użyciu Next.js, React,
+            TypeScript, TailwindCSS, Prisma i PostgreSQL. Projektowanie
+            formularzy rezerwacji oraz implementacja panelu administratora.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025</div>
+          <h3>Analiza danych (projekty uczelniane)</h3>
+          <p>
+            Analiza danych w Pythonie z użyciem Pandas i NumPy. Praca z danymi
+            CSV, czyszczenie datasetów oraz tworzenie raportów i modeli ML
+            (Linear Regression, Logistic Regression, Decision Tree).
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-date">2025 - obecnie</div>
+          <h3>Archiwum Libris</h3>
+          <p>Organizacja i archiwizacja dokumentów.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-section">
+      <div class="container text-center">
+        <p><strong>Kontakt:</strong> +48 880 632 697 | chibricosic@gmail.com</p>
+        <p class="rodo-text">
+          Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb
+          niezbędnych do realizacji procesu rekrutacji zgodnie z Rozporządzeniem
+          Parlamentu Europejskiego i Rady (UE) 2016/679... (RODO).
+        </p>
+      </div>
+    </footer>
+
+    <button id="theme-toggle" class="theme-switch-btn">Zmień motyw</button>
+
+    <script>
+      const themeStyle = document.getElementById("theme-style");
+      const themeToggle = document.getElementById("theme-toggle");
+
+      themeToggle.addEventListener("click", () => {
+        if (themeStyle.getAttribute("href") === "red.css") {
+          themeStyle.setAttribute("href", "green.css");
+        } else {
+          themeStyle.setAttribute("href", "red.css");
+        }
+      });
+    </script>
+  </body>
+</html>
