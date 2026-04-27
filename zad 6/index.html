@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV | Danylo Chybichyk</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link id="theme-style" rel="stylesheet" href="red.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="hero-section">
+      <div class="container text-center">
+        <h1>Danylo Chybichyk</h1>
+        <p class="subtitle">Student Informatyki | Full-Stack Developer</p>
+        <div class="contact-links">
+          <a href="mailto:chibricosic@gmail.com" class="btn">Email</a>
+          <a
+            href="https://github.com/diepeeeece"
+            target="_blank"
+            class="btn btn-outline"
+            >GitHub</a
+          >
+        </div>
+        <div style="margin-top: 20px">
+          <button id="theme-toggle" class="btn btn-outline">
+            Zmień motyw na Zielony
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card section-spacing">
+        <h2 class="section-title">O mnie</h2>
+        <p>
+          Zmobilizowany student 3 roku informatyki z praktycznym doświadczeniem
+          w tworzeniu stron internetowych, pracy w chmurze Microsoft Azure oraz
+          analizie danych przy użyciu Pythona i Pandas.
+        </p>
+      </section>
+
+      <section class="card section-spacing">
+        <h2 class="section-title">Umiejętności</h2>
+        <ul class="skills-list" id="skills-container"></ul>
+      </section>
+
+      <div class="text-center" style="margin-bottom: 20px">
+        <button id="toggle-projects-btn" class="btn">
+          Ukryj sekcję Projekty
+        </button>
+      </div>
+
+      <section id="projects-section" class="card section-spacing">
+        <h2 class="section-title">Doświadczenie i Projekty</h2>
+        <div id="projects-container"></div>
+      </section>
+
+      <section class="card section-spacing">
+        <h2 class="section-title">Kontakt</h2>
+        <form id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="imie">Imię *</label>
+            <input
+              type="text"
+              id="imie"
+              class="form-control"
+              placeholder="Wpisz imię"
+            />
+            <span class="error-msg" id="error-imie"></span>
+          </div>
+          <div class="form-group">
+            <label for="nazwisko">Nazwisko *</label>
+            <input
+              type="text"
+              id="nazwisko"
+              class="form-control"
+              placeholder="Wpisz nazwisko"
+            />
+            <span class="error-msg" id="error-nazwisko"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail *</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              placeholder="Twój adres e-mail"
+            />
+            <span class="error-msg" id="error-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="wiadomosc">Wiadomość *</label>
+            <textarea
+              id="wiadomosc"
+              class="form-control"
+              placeholder="Twoja wiadomość..."
+            ></textarea>
+            <span class="error-msg" id="error-wiadomosc"></span>
+          </div>
+          <button type="submit" class="btn">Wyślij wiadomość</button>
+          <div
+            id="form-success"
+            style="
+              color: green;
+              font-weight: bold;
+              margin-top: 15px;
+              display: none;
+            "
+          >
+            Formularz został pomyślnie zwalidowany!
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer-section">
+      <div class="container text-center">
+        <p><strong>Kontakt:</strong> +48 880 632 697 | chibricosic@gmail.com</p>
+        <p style="margin-top: 10px; font-weight: bold; color: #ffeb3b">
+          Numer indeksu: 68025
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
