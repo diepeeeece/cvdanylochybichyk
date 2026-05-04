@@ -1,3 +1,4 @@
+// ZADANIA 4, 5, 6 i 7
 console.log("Strona załadowana pomyślnie. Numer indeksu: 68025");
 
 // --- ZADANIE 4: ZMIANA MOTYWU I UKRYWANIE SEKCJI ---
@@ -75,7 +76,7 @@ contactForm.addEventListener("submit", function (event) {
   }
 });
 
-// --- ZADANIE 6: DANE Z JSON (FETCH) --
+// --- ZADANIE 6: DANE Z JSON (FETCH) ---
 fetch("data.json")
   .then((response) => {
     if (!response.ok) throw new Error("Błąd ładowania pliku JSON");
@@ -104,5 +105,46 @@ fetch("data.json")
   .catch((error) => {
     console.error("Błąd Fetch API:", error);
     document.getElementById("projects-container").innerHTML =
-      '<p style="color:red;">Nie udało się załadować danych JSON. Spróbuj otworzyć stronę przez serwer (np. Live Server) lub sprawdź wersję na GitHub Pages.</p>';
+      '<p style="color:red;">Nie udało się załadować danych JSON. Spróbuj otworzyć stronę przez serwer lokalny.</p>';
   });
+
+// --- ZADANIE 7: LOCAL STORAGE (Notatnik) ---
+const noteInput = document.getElementById("note-input");
+const addNoteBtn = document.getElementById("add-note-btn");
+const notesList = document.getElementById("notes-list");
+
+let notes = JSON.parse(localStorage.getItem("myNotes")) || [];
+
+function renderNotes() {
+  notesList.innerHTML = "";
+  notes.forEach((note, index) => {
+    const li = document.createElement("li");
+    li.className = "note-item";
+    li.innerHTML = `
+            <span>${note}</span>
+            <button class="delete-btn" onclick="deleteNote(${index})">Usuń</button>
+        `;
+    notesList.appendChild(li);
+  });
+}
+
+function saveNotes() {
+  localStorage.setItem("myNotes", JSON.stringify(notes));
+}
+addNoteBtn.addEventListener("click", () => {
+  const text = noteInput.value.trim();
+  if (text) {
+    notes.push(text);
+    saveNotes();
+    renderNotes();
+    noteInput.value = "";
+  }
+});
+
+window.deleteNote = function (index) {
+  notes.splice(index, 1);
+  saveNotes();
+  renderNotes();
+};
+
+renderNotes();

@@ -1,0 +1,37 @@
+{
+  "skills": [
+    {
+      "category": "Języki i technologie",
+      "details": "Python (Pandas), SQL (podstawowy), HTML/CSS/JS, Git"
+    },
+    {
+      "category": "Narzędzia i platformy",
+      "details": "Microsoft Azure, Microsoft Excel, PowerPoint, Word"
+    },
+    {
+      "category": "Języki obce",
+      "details": "Polski (C1+), Angielski (B2), Ukraiński (C2), Rosyjski (ojczysty)"
+    },
+    {
+      "category": "Kompetencje miękkie",
+      "details": "Praca w zespole, samodzielność, analityczne myślenie"
+    }
+  ],
+  "projects": [
+    {
+      "date": "2025 - obecnie",
+      "title": "Full-Stack Developer (projekt uczelniany)",
+      "description": "Tworzenie aplikacji webowej restauracji przy użyciu Next.js, React, TypeScript, TailwindCSS, Prisma i PostgreSQL."
+    },
+    {
+      "date": "2025",
+      "title": "Analiza danych (projekty uczelniane)",
+      "description": "Analiza danych w Pythonie z użyciem Pandas i NumPy. Tworzenie raportów i modeli ML (Linear Regression, Logistic Regression, Decision Tree)."
+    },
+    {
+      "date": "2025 - obecnie",
+      "title": "Archiwum Libris",
+      "description": "Organizacja i archiwizacja dokumentów."
+    }
+  ]
+}
