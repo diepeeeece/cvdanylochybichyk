@@ -101,7 +101,7 @@ window.deleteNote = function (index) {
 
 renderNotes();
 
-// --- ZADANIE 5 i 8: WALIDACJA FORMULARZA I WYSYŁKA POST ---
+// --- ZADANIE 5 i 8: WALIDACJA FORMULARZA I WYSYŁKA POST (FORMSPREE) ---
 const contactForm = document.getElementById("contact-form");
 const formSuccess = document.getElementById("form-success");
 
@@ -144,7 +144,7 @@ contactForm.addEventListener("submit", function (event) {
   if (!wiadomosc) showError("error-wiadomosc", "Wiadomość nie może być pusta.");
 
   if (isValid) {
-    // ZADANIE 8: Wysłanie danych do webhook.site
+    // ZADANIE 8: Wysłanie danych do Formspree
     const formData = {
       imie: imie,
       nazwisko: nazwisko,
@@ -153,8 +153,7 @@ contactForm.addEventListener("submit", function (event) {
       indeks: "68025",
     };
 
-    const backendURL =
-      "https://webhook.site/3d3ef511-a391-4dbb-9a26-e624625f3917";
+    const backendURL = "https://formspree.io/f/xwvyanlb";
 
     formSuccess.innerText = "Wysyłanie danych...";
     formSuccess.style.color = "blue";
@@ -164,21 +163,25 @@ contactForm.addEventListener("submit", function (event) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Accept: "application/json", // Wymagane przez Formspree
       },
       body: JSON.stringify(formData),
     })
       .then((response) => {
-        console.log("Dane wysłane pomyślnie na serwer!");
-        formSuccess.innerText =
-          "Wiadomość została wysłana na serwer! (Zadanie 8 zaliczone)";
-        formSuccess.style.color = "green";
-        contactForm.reset();
+        if (response.ok) {
+          console.log("Dane wysłane pomyślnie na Formspree!");
+          formSuccess.innerText =
+            "Wiadomość została wysłana! (Zadanie 8 zaliczone)";
+          formSuccess.style.color = "green";
+          contactForm.reset();
+        } else {
+          throw new Error("Błąd serwera Formspree");
+        }
       })
       .catch((error) => {
         console.error("Błąd podczas wysyłania:", error);
-        formSuccess.innerText = "Wysłano POST, sprawdź dane na Webhook.site!";
-        formSuccess.style.color = "orange";
-        contactForm.reset();
+        formSuccess.innerText = "Błąd wysyłania. Sprawdź konsolę.";
+        formSuccess.style.color = "red";
       });
   }
 });
